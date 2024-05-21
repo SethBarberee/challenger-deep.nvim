@@ -153,7 +153,7 @@ local syntax = {
     NormalFloat = { fg = challenger_deep.fg, bg = challenger_deep.bg },
     FloatBorder = { fg = challenger_deep.white, bg = challenger_deep.bg },
 
-    TreesitterContext = { bg = challenger_deep.bg_dark },
+    TreesitterContext = { bg = challenger_deep.bg },
     DiffAdd = { bg = challenger_deep.green, fg = challenger_deep.black },
     DiffAdded = { bg = challenger_deep.green, fg = challenger_deep.black },
     DiffDelete = { bg = challenger_deep.red, fg = challenger_deep.black },
@@ -176,6 +176,8 @@ local syntax = {
     NeoTreeGitModified = { fg = challenger_deep.yellow },
     NeoTreeGitDeleted = { fg = challenger_deep.red },
     NeoTreeDotfile = { fg = challenger_deep.white },
+
+    -- vista.vim
     --VistaBracket = {fg=challenger_deeper.grey},
     --VistaChildrenNr = {fg=challenger_deeper.yellow},
     --VistaKind = {fg=challenger_deeper.purpl},
@@ -188,31 +190,20 @@ local syntax = {
     --VistaLineNr = {fg=challenger_deeper.fg},
 
 
+    -- Diagnostics
     -- Taken from fleet-theme-nvim
     -- I Like how they handle the bg/fgs for diagnostics
-    --LspDiagnosticsSignError = {fg=challenger_deeper.red},
-    DiagnosticError          = { bg = challenger_deep.error_bg, fg = challenger_deep.red },
-    DiagnosticWarn           = { bg = challenger_deep.warning_bg, fg = challenger_deep.dark_yellow }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-    DiagnosticInfo           = { bg = challenger_deep.info_bg, fg = challenger_deep.fg },             -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-    DiagnosticHint           = { bg = challenger_deep.hint_bg, fg = challenger_deep.blue },           -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-    DiagnosticUnderlineError = {
+    DiagnosticError                          = { bg = challenger_deep.error_bg, fg = challenger_deep.red },
+    DiagnosticWarn                           = { bg = challenger_deep.warning_bg, fg = challenger_deep.dark_yellow }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+    DiagnosticInfo                           = { bg = challenger_deep.info_bg, fg = challenger_deep.fg },             -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+    DiagnosticHint                           = { bg = challenger_deep.hint_bg, fg = challenger_deep.blue },           -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+    DiagnosticUnderlineError                 = {
         fg = challenger_deep.red,
         sp = challenger_deep.dark_red,
         underline = true
     },
-    --LspDiagnosticsSignWarning = {fg=challenger_deeper.yellow},
-    --LspDiagnosticsSignInformation = {fg=challenger_deeper.blue},
-    --LspDiagnosticsSignHint = {fg=challenger_deeper.cyan},
-    --LspDiagnosticsVirtualTextError = {fg=challenger_deeper.red},
-    --LspDiagnosticsVirtualTextWarning= {fg=challenger_deeper.yellow},
-    --LspDiagnosticsVirtualTextInformation = {fg=challenger_deeper.blue},
-    --LspDiagnosticsVirtualTextHint = {fg=challenger_deeper.cyan},
-    --LspDiagnosticsUnderlineError = {undercurl = true,sp=challenger_deeper.red},
-    --LspDiagnosticsUnderlineWarning = {undercurl = true,sp=challenger_deeper.yellow},
-    --LspDiagnosticsUnderlineInformation = {undercurl = true,sp=challenger_deeper.blue},
-    --LspDiagnosticsUnderlineHint = {undercurl = true,sp=challenger_deeper.cyan},
 
-    TelescopeBorder          = { link = 'LspInfoBorder' },
+    TelescopeBorder                          = { link = 'LspInfoBorder' },
     --TelescopePromptBorder = {fg=challenger_deeper.blue},
     --TelescopeMatching = {fg=challenger_deeper.teal},
     --TelescopeSelection = {fg=challenger_deeper.yellow, bg=challenger_deeper.bg_highlight,bold = true},
@@ -222,22 +213,23 @@ local syntax = {
     -- nvim-cmp
     -- TODO: Maybe use the TS Highlight groups?
     -- Currently, doing a VSCode style
-    CmpItemAbbrMatchFuzzy    = { bg = challenger_deep.bg_subtle, fg = challenger_deep.dark_cyan },
-    CmpItemAbbrMatch         = { bg = challenger_deep.bg_subtle, fg = challenger_deep.dark_cyan },
-    CmpItemKindFunction      = { fg = challenger_deep.purple },
-    CmpItemKindMethod        = { link = 'CmpItemKindFunction' },
-    CmpItemKindModule        = { fg = challenger_deep.yellow },
-    CmpItemKindClass         = { link = 'CmpItemKindModule' },
-    CmpItemKindProperty      = { link = 'CmpItemKindModule' },
-    CmpItemKindField         = { link = 'CmpItemKindModule' },
-    CmpItemKindStruct        = { link = 'CmpItemKindModule' },
-    CmpItemKindInterface     = { link = 'CmpItemKindModule' },
-    CmpItemKindConstructor   = { link = 'CmpItemKindModule' },
-    CmpItemKindNamespace     = { link = 'CmpItemKindModule' },
-    CmpItemKindFile          = { link = 'CmpItemKindModule' },
-    CmpItemKindValue         = { fg = challenger_deep.dark_cyan },
-    CmpItemKindVariable      = { fg = challenger_deep.blue },
-    CmpItemKindTypeParameter = { link = 'CmpItemKindVariable' },
+    CmpItemAbbrMatchFuzzy                    = { bg = challenger_deep.bg_subtle, fg = challenger_deep.dark_cyan },
+    CmpItemAbbrMatch                         = { bg = challenger_deep.bg_subtle, fg = challenger_deep.dark_cyan },
+    CmpItemKindFunction                      = { fg = challenger_deep.purple },
+    CmpItemKindMethod                        = { link = 'CmpItemKindFunction' },
+    CmpItemKindModule                        = { fg = challenger_deep.yellow },
+    CmpItemKindClass                         = { link = 'CmpItemKindModule' },
+    CmpItemKindProperty                      = { link = 'CmpItemKindModule' },
+    CmpItemKindField                         = { link = 'CmpItemKindModule' },
+    CmpItemKindStruct                        = { link = 'CmpItemKindModule' },
+    CmpItemKindInterface                     = { link = 'CmpItemKindModule' },
+    CmpItemKindConstructor                   = { link = 'CmpItemKindModule' },
+    CmpItemKindNamespace                     = { link = 'CmpItemKindModule' },
+    CmpItemKindFile                          = { link = 'CmpItemKindModule' },
+    CmpItemKindValue                         = { fg = challenger_deep.dark_cyan },
+    CmpItemKindVariable                      = { fg = challenger_deep.blue },
+    CmpItemKindTypeParameter                 = { link = 'CmpItemKindVariable' },
+
     ---- nvim-scrollbar
     --ScrollbarWarn = { fg = challenger_deeper.dark_yellow },
     --ScrollbarWarnHandle = { bg = challenger_deeper.bg_dark, fg = challenger_deeper.dark_yellow },
@@ -247,12 +239,16 @@ local syntax = {
     --ScrollbarHintHandle = { bg = challenger_deeper.bg_dark, fg = challenger_deeper.green },
     --ScrollbarHandle = { bg = challenger_deeper.bg_dark },
 
-    SymbolUsageRounding      = { fg = challenger_deep.bg_subtle, italic = true },
-    SymbolUsageContent       = { bg = challenger_deep.bg_subtle, fg = challenger_deep.medium_gray, italic = true },
-    SymbolUsageRef           = { bg = challenger_deep.bg_subtle, fg = challenger_deep.purple, italic = true },
-    SymbolUsageDef           = { bg = challenger_deep.bg_subtle, fg = challenger_deep.blue, italic = true },
-    SymbolUsageImpl          = { bg = challenger_deep.bg_subtle, fg = challenger_deep.red, italic = true },
+    SymbolUsageRounding                      = { fg = challenger_deep.bg_subtle, italic = true },
+    SymbolUsageContent                       = { bg = challenger_deep.bg_subtle, fg = challenger_deep.medium_gray, italic = true },
+    SymbolUsageRef                           = { bg = challenger_deep.bg_subtle, fg = challenger_deep.purple, italic = true },
+    SymbolUsageDef                           = { bg = challenger_deep.bg_subtle, fg = challenger_deep.blue, italic = true },
+    SymbolUsageImpl                          = { bg = challenger_deep.bg_subtle, fg = challenger_deep.red, italic = true },
 
+    -- vim-illuminate
+    IlluminatedWordText                      = { link = 'Search' },
+    IlluminatedWordRead                      = { link = 'Search' },
+    IlluminatedWordWrite                     = { link = 'Search' },
 
     -- nvim-navic
     NavicIconsFile                           = { link = 'CmpItemKindFile' },
@@ -283,13 +279,16 @@ local syntax = {
     NavicIconsTypeParameter                  = { link = 'CmpItemKindTypeParameter' },
     NavicText                                = { link = 'Normal' },
     NavicSeparator                           = { bg = challenger_deep.bg, fg = challenger_deep.white },
+
     -- Link up Null-LS windows to be like LspInfo
     NullLsInfoTitle                          = { link = 'LspInfoTitle' },
     NullLsInfoBorder                         = { link = 'LspInfoBorder' },
     NullLsInfoSources                        = { link = 'Type' },
+
     -- Semantic Tokens (from @folke tokyonight)
     ["@attribute"]                           = { link = "PreProc" },
     ["@define"]                              = { link = "PreProc" },
+    ["@variable"]                              = { link = "Identifier" },
     ["@lsp.type.comment"]                    = { link = "@comment" },
     ["@lsp.type.enum"]                       = { link = "@type" },
     ["@lsp.type.type"]                       = { link = "@type" },
