@@ -288,7 +288,8 @@ local syntax = {
     -- Semantic Tokens (from @folke tokyonight)
     ["@attribute"]                           = { link = "PreProc" },
     ["@define"]                              = { link = "PreProc" },
-    ["@variable"]                              = { link = "Identifier" },
+    ["@preproc"]                             = { link = "PreProc" },
+    ["@variable"]                            = { link = "Identifier" },
     ["@lsp.type.comment"]                    = { link = "@comment" },
     ["@lsp.type.enum"]                       = { link = "@type" },
     ["@lsp.type.type"]                       = { link = "@type" },
